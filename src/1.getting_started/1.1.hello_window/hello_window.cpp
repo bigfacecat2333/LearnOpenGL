@@ -14,11 +14,14 @@ int main()
 {
     // glfw: initialize and configure
     // ------------------------------
+    // 调用glfwInit函数来初始化GLFW
     glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    // glfwWindowHint函数来配置GLFW, 第一个参数代表选项的名称, 第二个参数代表选项的值
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);  // 主版本号
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);  // 次版本号
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);  // 使用核心模式: 只包含最新的功能, 不再需向后兼容特性
 
+// 如果是Mac系统, 需要加上下面这行代码, 否则会报错
 #ifdef __APPLE__
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
@@ -32,6 +35,7 @@ int main()
         glfwTerminate();
         return -1;
     }
+    // 通知GLFW将我们窗口的上下文设置为当前线程的主上下文了
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
