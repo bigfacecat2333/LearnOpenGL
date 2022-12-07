@@ -222,8 +222,12 @@ int main()
         // camera/view transformation
         glm::mat4 view = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
         float radius = 10.0f;
+        // 旋转的是摄像机 sin^2 + cos^2 = 1
         float camX = static_cast<float>(sin(glfwGetTime()) * radius);
         float camZ = static_cast<float>(cos(glfwGetTime()) * radius);
+        // 原理：有了摄像机的三个轴外加一个平移向量来创建一个矩阵，
+        // 并且你可以用这个矩阵乘以任何向量来将其变换到那个坐标空间。这正是LookAt矩阵所做的
+        // 实际上我们要做的只是定义一个摄像机位置（eye），一个目标位置（原点），以及一个向上的向量（0，1，0）
         view = glm::lookAt(glm::vec3(camX, 0.0f, camZ), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         ourShader.setMat4("view", view);
 

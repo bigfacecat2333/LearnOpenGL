@@ -190,6 +190,7 @@ int main()
         // render
         // ------
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        // 因为我们使用了深度测试, 在每次渲染迭代之前清除深度缓冲（否则前一帧的深度信息仍然保存在缓冲中）
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // also clear the depth buffer now!
 
         // bind textures on corresponding texture units

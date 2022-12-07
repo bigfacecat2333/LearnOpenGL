@@ -200,6 +200,9 @@ int main()
         // material properties
         lightingShader.setFloat("material.shininess", 64.0f);
 
+        lightingShader.setFloat("matrixlight", (1.0 + sin(glfwGetTime())) / 2 + 0.5);
+        lightingShader.setFloat("matrixmove", glfwGetTime());
+
         // view/projection transformations
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         glm::mat4 view = camera.GetViewMatrix();

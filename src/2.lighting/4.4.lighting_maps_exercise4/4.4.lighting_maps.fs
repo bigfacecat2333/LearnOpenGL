@@ -24,6 +24,9 @@ uniform vec3 viewPos;
 uniform Material material;
 uniform Light light;
 
+uniform float matrixlight;
+uniform float matrixmove;
+
 void main()
 {
     // ambient
@@ -42,7 +45,7 @@ void main()
     vec3 specular = light.specular * spec * texture(material.specular, TexCoords).rgb;  
     
       // emission
-    vec3 emission = texture(material.emission, TexCoords).rgb;
+    vec3 emission = matrixlight * texture(material.emission,vec2(TexCoords.x,TexCoords.y+matrixmove)).rgb;
         
     vec3 result = ambient + diffuse + specular + emission;
     FragColor = vec4(result, 1.0);

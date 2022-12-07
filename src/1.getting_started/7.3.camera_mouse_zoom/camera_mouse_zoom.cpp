@@ -60,10 +60,14 @@ int main()
     }
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    // 让GLFW监听鼠标移动事件
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetScrollCallback(window, scroll_callback);
 
     // tell GLFW to capture our mouse
+    // 首先我们要告诉GLFW，它应该隐藏光标，并捕捉(Capture)它。捕捉光标表示的是，如果焦点在你的程序上（译注：即表示你正在操作这个程序，
+    // Windows中拥有焦点的程序标题栏通常是有颜色的那个，而失去焦点的程序标题栏则是灰色的），光标应该停留在窗口中（除非程序失去焦点或者退出）。
+    // 我们可以用一个简单地配置调用来完成：无论我们怎么去移动鼠标，光标都不会显示了，它也不会离开窗口
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // glad: load all OpenGL function pointers
@@ -313,34 +317,47 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 // -------------------------------------------------------
 void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
 {
+    // 思路：偏航角和俯仰角是通过鼠标（或手柄）移动获得的，水平的移动影响偏航角，竖直的移动影响俯仰角。
+    // 它的原理就是，储存上一帧鼠标的位置，在当前帧中我们当前计算鼠标位置与上一帧的位置相差多少。
+    // 如果水平/竖直差别越大那么俯仰角或偏航角就改变越大，也就是摄像机需要移动更多的距离。
+    // xpos和ypos代表当前鼠标的位置
+
+    // 在处理FPS风格摄像机的鼠标输入的时候，我们必须在最终获取方向向量之前做下面这几步：
+    // 计算鼠标距上一帧的偏移量。
+    // 把偏移量添加到摄像机的俯仰角和偏航角中。
+    // 对偏航角和俯仰角进行最大和最小值的限制。
+    // 计算方向向量。
     float xpos = static_cast<float>(xposIn);
     float ypos = static_cast<float>(yposIn);
 
-    if (firstMouse)
+    if (firstMouse)  // 第一次进入，任意初始值
     {
         lastX = xpos;
         lastY = ypos;
         firstMouse = false;
     }
-
+    // 在鼠标的回调函数中我们计算当前帧和上一帧鼠标位置的偏移量：
     float xoffset = xpos - lastX;
     float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
     lastX = xpos;
     lastY = ypos;
-
+    // sensitivity（灵敏度）值。如果我们忽略这个值，鼠标移动就会太大了；你可以自己实验一下，找到适合自己的灵敏度值。
     float sensitivity = 0.1f; // change this value to your liking
     xoffset *= sensitivity;
     yoffset *= sensitivity;
-
+    // 接下来我们把偏移量加到全局变量pitch和yaw上：
     yaw += xoffset;
     pitch += yoffset;
 
     // make sure that when pitch is out of bounds, screen doesn't get flipped
+    // 我们需要给摄像机添加一些限制，这样摄像机就不会发生奇怪的移动了
     if (pitch > 89.0f)
         pitch = 89.0f;
     if (pitch < -89.0f)
         pitch = -89.0f;
 
+    // 最后一步，就是通过俯仰角和偏航角来计算以得到真正的方向向量：
+    // 计算出来的方向向量就会包含根据鼠标移动计算出来的所有旋转了
     glm::vec3 front;
     front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
     front.y = sin(glm::radians(pitch));
@@ -349,6 +366,7 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
 }
 
 // glfw: whenever the mouse scroll wheel scrolls, this callback is called
+// 缩放(Zoom)接口：使用鼠标的滚轮调整视野(Field of View)或fov  yoffset值代表我们竖直滚动的大小
 // ----------------------------------------------------------------------
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
