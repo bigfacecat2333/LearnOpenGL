@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D2302891-DBC0-3D9B-B44B-3A5D327C2B12}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>2.lighting__1.colors</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\xxy\graphics\LearnOpenGL\bin\2.lighting\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">2.lighting__1.colors.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">2.lighting__1.colors</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\xxy\graphics\LearnOpenGL\bin\2.lighting\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">2.lighting__1.colors.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">2.lighting__1.colors</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\xxy\graphics\LearnOpenGL\bin\2.lighting\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">2.lighting__1.colors.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">2.lighting__1.colors</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\xxy\graphics\LearnOpenGL\bin\2.lighting\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">2.lighting__1.colors.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">2.lighting__1.colors</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>							</Message>
+      <Command>setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.colors.fs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.colors.vs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.light_cube.fs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.light_cube.vs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp.lib;freetype.lib;irrKlang.lib;Debug\STB_IMAGE.lib;Debug\GLAD.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/xxy/graphics/LearnOpenGL/lib;E:/xxy/graphics/LearnOpenGL/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /ignore:4099</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/xxy/graphics/LearnOpenGL/vs_build/Debug/2.lighting__1.colors.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Debug/2.lighting__1.colors.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>							</Message>
+      <Command>setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.colors.fs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.colors.vs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.light_cube.fs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.light_cube.vs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp.lib;freetype.lib;irrKlang.lib;Release\STB_IMAGE.lib;Release\GLAD.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/xxy/graphics/LearnOpenGL/lib;E:/xxy/graphics/LearnOpenGL/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /ignore:4099</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/xxy/graphics/LearnOpenGL/vs_build/Release/2.lighting__1.colors.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/xxy/graphics/LearnOpenGL/bin/2.lighting/Release/2.lighting__1.colors.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>							</Message>
+      <Command>setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.colors.fs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.colors.vs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.light_cube.fs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.light_cube.vs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp.lib;freetype.lib;irrKlang.lib;MinSizeRel\STB_IMAGE.lib;MinSizeRel\GLAD.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/xxy/graphics/LearnOpenGL/lib;E:/xxy/graphics/LearnOpenGL/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /ignore:4099</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/xxy/graphics/LearnOpenGL/vs_build/MinSizeRel/2.lighting__1.colors.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/xxy/graphics/LearnOpenGL/bin/2.lighting/MinSizeRel/2.lighting__1.colors.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\xxy\graphics\LearnOpenGL\vs_build\configuration;E:\xxy\graphics\LearnOpenGL\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>							</Message>
+      <Command>setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.colors.fs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.colors.vs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.light_cube.fs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/src/2.lighting/1.colors/1.light_cube.vs E:/xxy/graphics/LearnOpenGL/bin/2.lighting/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -E copy E:/xxy/graphics/LearnOpenGL/dlls/assimp-vc140-mt.dll E:/xxy/graphics/LearnOpenGL/dlls/ikpMP3.dll E:/xxy/graphics/LearnOpenGL/dlls/irrKlang.dll E:/xxy/graphics/LearnOpenGL/bin/2.lighting/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp.lib;freetype.lib;irrKlang.lib;RelWithDebInfo\STB_IMAGE.lib;RelWithDebInfo\GLAD.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/xxy/graphics/LearnOpenGL/lib;E:/xxy/graphics/LearnOpenGL/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64 /ignore:4099</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/xxy/graphics/LearnOpenGL/vs_build/RelWithDebInfo/2.lighting__1.colors.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/xxy/graphics/LearnOpenGL/bin/2.lighting/RelWithDebInfo/2.lighting__1.colors.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\xxy\graphics\LearnOpenGL\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/xxy/graphics/LearnOpenGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+E:\xxy\Cmake\bin\cmake.exe -SE:/xxy/graphics/LearnOpenGL -BE:/xxy/graphics/LearnOpenGL/vs_build --check-stamp-file E:/xxy/graphics/LearnOpenGL/vs_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;E:\xxy\Cmake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\FindPackageMessage.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindASSIMP.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindGLFW3.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindGLM.cmake;E:\xxy\graphics\LearnOpenGL\configuration\root_directory.h.in;E:\xxy\graphics\LearnOpenGL\configuration\visualstudio.vcxproj.user.in;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeCCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/xxy/graphics/LearnOpenGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+E:\xxy\Cmake\bin\cmake.exe -SE:/xxy/graphics/LearnOpenGL -BE:/xxy/graphics/LearnOpenGL/vs_build --check-stamp-file E:/xxy/graphics/LearnOpenGL/vs_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;E:\xxy\Cmake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\FindPackageMessage.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindASSIMP.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindGLFW3.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindGLM.cmake;E:\xxy\graphics\LearnOpenGL\configuration\root_directory.h.in;E:\xxy\graphics\LearnOpenGL\configuration\visualstudio.vcxproj.user.in;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeCCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/xxy/graphics/LearnOpenGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+E:\xxy\Cmake\bin\cmake.exe -SE:/xxy/graphics/LearnOpenGL -BE:/xxy/graphics/LearnOpenGL/vs_build --check-stamp-file E:/xxy/graphics/LearnOpenGL/vs_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;E:\xxy\Cmake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\FindPackageMessage.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindASSIMP.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindGLFW3.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindGLM.cmake;E:\xxy\graphics\LearnOpenGL\configuration\root_directory.h.in;E:\xxy\graphics\LearnOpenGL\configuration\visualstudio.vcxproj.user.in;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeCCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/xxy/graphics/LearnOpenGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+E:\xxy\Cmake\bin\cmake.exe -SE:/xxy/graphics/LearnOpenGL -BE:/xxy/graphics/LearnOpenGL/vs_build --check-stamp-file E:/xxy/graphics/LearnOpenGL/vs_build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;E:\xxy\Cmake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\FindPackageMessage.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\Windows.cmake;E:\xxy\Cmake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindASSIMP.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindGLFW3.cmake;E:\xxy\graphics\LearnOpenGL\cmake\modules\FindGLM.cmake;E:\xxy\graphics\LearnOpenGL\configuration\root_directory.h.in;E:\xxy\graphics\LearnOpenGL\configuration\visualstudio.vcxproj.user.in;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeCCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\3.25.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\xxy\graphics\LearnOpenGL\vs_build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\1.colors\1.colors.fs">
+    </None>
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\1.colors\1.colors.vs">
+    </None>
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\1.colors\1.light_cube.fs">
+    </None>
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\1.colors\1.light_cube.vs">
+    </None>
+    <ClCompile Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\1.colors\colors.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\xxy\graphics\LearnOpenGL\vs_build\ZERO_CHECK.vcxproj">
+      <Project>{CF02C316-1BE5-3044-89A3-735667156E80}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\xxy\graphics\LearnOpenGL\vs_build\GLAD.vcxproj">
+      <Project>{196A7F35-CEBA-3108-A691-C44438DA2237}</Project>
+      <Name>GLAD</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\xxy\graphics\LearnOpenGL\vs_build\STB_IMAGE.vcxproj">
+      <Project>{02D6B419-B8B2-3B44-A661-DED387E4BD18}</Project>
+      <Name>STB_IMAGE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

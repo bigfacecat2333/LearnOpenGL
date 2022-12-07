@@ -10,7 +10,7 @@ void processInput(GLFWwindow *window);
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
-
+// gl_position 表示顶点的位置，gl_Position 是一个内置的向量，它的值是顶点的最终位置，它的值是由顶点着色器计算出来的。（MVP）
 const char *vertexShaderSource ="#version 330 core\n"
     "layout (location = 0) in vec3 aPos;\n"
     "void main()\n"
@@ -146,9 +146,12 @@ int main()
         glUseProgram(shaderProgram);
 
         // update shader uniform
+        // glfwGetTime()获取运行的秒数。然后我们使用sin函数让颜色在0.0到1.0之间改变，最后将结果储存到greenValue里。
         double  timeValue = glfwGetTime();
         float greenValue = static_cast<float>(sin(timeValue) / 2.0 + 0.5);
+        // 用glGetUniformLocation查询uniform ourColor的位置值
         int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+        // 通过glUniform4f函数设置uniform值
         glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
 
         // render the triangle

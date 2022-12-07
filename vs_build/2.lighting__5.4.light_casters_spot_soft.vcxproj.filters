@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\5.4.light_casters_spot_soft\light_casters_spot_soft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\xxy\graphics\LearnOpenGL\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\5.4.light_casters_spot_soft\5.4.light_casters.fs" />
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\5.4.light_casters_spot_soft\5.4.light_casters.vs" />
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\5.4.light_casters_spot_soft\5.4.light_cube.fs" />
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\2.lighting\5.4.light_casters_spot_soft\5.4.light_cube.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A6620985-D427-39CA-9D14-99D1D0C182FE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

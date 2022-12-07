@@ -1,0 +1,10 @@
+^E:\XXY\GRAPHICS\LEARNOPENGL\VS_BUILD\CMAKEFILES\2886C9F4CDF2E1CAE7D1868E076451B6\GENERATE.STAMP.RULE
+setlocal
+E:\xxy\Cmake\bin\cmake.exe -SE:/xxy/graphics/LearnOpenGL -BE:/xxy/graphics/LearnOpenGL/vs_build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/xxy/graphics/LearnOpenGL/vs_build/LearnOpenGL.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

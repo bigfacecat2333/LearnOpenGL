@@ -11,15 +11,17 @@
 class Shader
 {
 public:
+    // 程序ID
     unsigned int ID;
     // constructor generates the shader on the fly
     // ------------------------------------------------------------------------
+    // 构造器读取并构建着色器
     Shader(const char* vertexPath, const char* fragmentPath)
     {
         // 1. retrieve the vertex/fragment source code from filePath
         std::string vertexCode;
         std::string fragmentCode;
-        std::ifstream vShaderFile;
+        std::ifstream vShaderFile;  // ifstream是输入文件流
         std::ifstream fShaderFile;
         // ensure ifstream objects can throw exceptions:
         vShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
@@ -74,10 +76,12 @@ public:
     { 
         glUseProgram(ID); 
     }
-    // utility uniform functions
+    // utility uniform functions uniform的setter函数也很类似：我们需要获取uniform的位置并调用glUniform函数
+    // 更新一个uniform之前你必须先使用程序（调用glUseProgram)，因为它是在当前激活的着色器程序中设置uniform的。
     // ------------------------------------------------------------------------
     void setBool(const std::string &name, bool value) const
-    {         
+    {
+        // glUniform1i第一个参数是uniform的位置，第二个参数是要设置的值
         glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value); 
     }
     // ------------------------------------------------------------------------

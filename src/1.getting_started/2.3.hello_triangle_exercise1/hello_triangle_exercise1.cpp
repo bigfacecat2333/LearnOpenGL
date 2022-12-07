@@ -112,6 +112,7 @@ int main()
     }; 
 
     unsigned int VBO, VAO;
+    // VAO的作用是将VAO和VBO绑定，这样VAO就会记住VBO的配置，当调用glBindVertexArray(VAO)时，就会自动绑定VBO
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
@@ -119,7 +120,7 @@ int main()
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
+    // VBO的配置，告诉OpenGL如何解析顶点数据；VAO会记住VBO的配置，所以在渲染时只需要绑定VAO就可以了
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 

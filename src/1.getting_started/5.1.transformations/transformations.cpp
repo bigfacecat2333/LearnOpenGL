@@ -167,14 +167,17 @@ int main()
         glBindTexture(GL_TEXTURE_2D, texture2);
 
         // create transformations
+        // 先平移，再旋转
         glm::mat4 transform = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
-        transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+        // translate完成平移 (0.5f, -0.5f, 0.0f)后，图像向右平移0.5，向下平移0.5: 传递一个单位矩阵和位移向量
+        transform = glm::translate(transform, glm::vec3(0.2f, -0.2f, 0.0f));
+        // rotate完成旋转， 表示图像绕z轴旋转多少度
         transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
 
         // get matrix's uniform location and set matrix
         ourShader.use();
         unsigned int transformLoc = glGetUniformLocation(ourShader.ID, "transform");
-        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));  // tips:glm内部是列主序，所以不需要要转置
 
         // render container
         glBindVertexArray(VAO);

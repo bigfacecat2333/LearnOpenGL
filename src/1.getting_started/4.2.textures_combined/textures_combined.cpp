@@ -49,7 +49,7 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader ourShader("4.2.texture.vs", "4.2.texture.fs");
+    Shader ourShader("./4.2.texture.vs", "./4.2.texture.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -116,6 +116,7 @@ int main()
         std::cout << "Failed to load texture" << std::endl;
     }
     stbi_image_free(data);
+
     // texture 2
     // ---------
     glGenTextures(1, &texture2);
@@ -148,8 +149,6 @@ int main()
     // or set it via the texture class
     ourShader.setInt("texture2", 1);
 
-
-
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -164,6 +163,8 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         // bind textures on corresponding texture units
+        // 纹理单元GL_TEXTURE0默认总是被激活，所以我们在前面的例子里当我们使用glBindTexture的时候，无需激活任何纹理单元。
+        // GL_TEXTURE0 + 8的方式获得GL_TEXTURE8，这在当我们需要循环一些纹理单元的时候会很有用
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture1);
         glActiveTexture(GL_TEXTURE1);

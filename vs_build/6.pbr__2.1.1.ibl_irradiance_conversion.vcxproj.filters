@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\xxy\graphics\LearnOpenGL\src\6.pbr\2.1.1.ibl_irradiance_conversion\ibl_irradiance_conversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\xxy\graphics\LearnOpenGL\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\6.pbr\2.1.1.ibl_irradiance_conversion\2.1.1.background.fs" />
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\6.pbr\2.1.1.ibl_irradiance_conversion\2.1.1.background.vs" />
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\6.pbr\2.1.1.ibl_irradiance_conversion\2.1.1.cubemap.vs" />
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\6.pbr\2.1.1.ibl_irradiance_conversion\2.1.1.equirectangular_to_cubemap.fs" />
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\6.pbr\2.1.1.ibl_irradiance_conversion\2.1.1.pbr.fs" />
+    <None Include="E:\xxy\graphics\LearnOpenGL\src\6.pbr\2.1.1.ibl_irradiance_conversion\2.1.1.pbr.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A6620985-D427-39CA-9D14-99D1D0C182FE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -15,7 +15,7 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 // stores how much we're seeing of either texture
-float mixValue = 0.2f;
+float mixValue = 0.5f;
 
 int main()
 {
@@ -173,6 +173,7 @@ int main()
         glBindTexture(GL_TEXTURE_2D, texture2);
 
         // set the texture mix value in the shader
+        // 设置全局变量
         ourShader.setFloat("mixValue", mixValue);
 
         // render container
