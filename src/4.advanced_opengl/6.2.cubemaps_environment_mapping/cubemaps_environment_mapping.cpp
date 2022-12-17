@@ -249,7 +249,7 @@ int main()
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
 
-        // draw skybox as last
+        // draw skybox as last  优化：先绘制天空盒子，再绘制场景，这样天空盒子就不会被场景遮挡
         glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
         skyboxShader.use();
         view = glm::mat4(glm::mat3(camera.GetViewMatrix())); // remove translation from the view matrix

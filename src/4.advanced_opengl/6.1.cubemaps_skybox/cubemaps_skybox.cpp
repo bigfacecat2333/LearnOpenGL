@@ -196,7 +196,9 @@ int main()
     // load textures
     // -------------
     unsigned int cubeTexture = loadTexture(FileSystem::getPath("resources/textures/container.jpg").c_str());
-
+    // 如果我们假设将这样的立方体贴图应用到一个立方体上，采样立方体贴图所使用的方向向量将和立方体（插值的）顶点位置非常相像。
+    // 这样子，只要立方体的中心位于原点，我们就能使用立方体的实际位置向量来对立方体贴图进行采样了。
+    // 接下来，我们可以将所有顶点的纹理坐标当做是立方体的顶点位置。最终得到的结果就是可以访问立方体贴图上正确面(Face)纹理的一个纹理坐标。
     vector<std::string> faces
     {
         FileSystem::getPath("resources/textures/skybox/right.jpg"),
@@ -251,8 +253,13 @@ int main()
         glBindVertexArray(0);
 
         // draw skybox as last
+        // 有了立方体贴图纹理，渲染天空盒现在就非常简单了，我们只需要绑定立方体贴图纹理，skybox采样器就会自动填充上天空盒立方体贴图了。
+        // 绘制天空盒时，我们需要将它变为场景中的第一个渲染的物体，并且禁用深度写入。这样子天空盒就会永远被绘制在其它物体的背后了。
         glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
         skyboxShader.use();
+        // 希望天空盒是以玩家为中心的，这样不论玩家移动了多远，天空盒都不会变近，让玩家产生周围环境非常大的印象。
+        // 当前的观察矩阵会旋转、缩放和位移来变换天空盒的所有位置，所以当玩家移动的时候，立方体贴图也会移动！我们希望移除观察矩阵中的位移部分，
+        // 让移动不会影响天空盒的位置向量
         view = glm::mat4(glm::mat3(camera.GetViewMatrix())); // remove translation from the view matrix
         skyboxShader.setMat4("view", view);
         skyboxShader.setMat4("projection", projection);
@@ -396,6 +403,12 @@ unsigned int loadCubemap(vector<std::string> faces)
         unsigned char *data = stbi_load(faces[i].c_str(), &width, &height, &nrChannels, 0);
         if (data)
         {
+            // GL_TEXTURE_CUBE_MAP_POSITIVE_X	右
+            // GL_TEXTURE_CUBE_MAP_NEGATIVE_X	左
+            // GL_TEXTURE_CUBE_MAP_POSITIVE_Y	上
+            // GL_TEXTURE_CUBE_MAP_NEGATIVE_Y	下
+            // GL_TEXTURE_CUBE_MAP_POSITIVE_Z	后
+            // GL_TEXTURE_CUBE_MAP_NEGATIVE_Z	前
             glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
             stbi_image_free(data);
         }
@@ -405,6 +418,7 @@ unsigned int loadCubemap(vector<std::string> faces)
             stbi_image_free(data);
         }
     }
+    // S T R 对应纹理的坐标轴 环绕方式设置为GL_CLAMP_TO_EDGE，表示超出范围的坐标使用边缘的颜色， 这是因为正好处于两个面之间的纹理坐标可能不能击中一个面
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);

@@ -51,8 +51,14 @@ private:
     {
         // read file via ASSIMP
         Assimp::Importer importer;
+        // 这个函数需要一个文件路径，它的第二个参数是一些后期处理(Post-processing)的选项
+        // aiProcess_Triangulate，我们告诉Assimp，如果模型不是（全部）由三角形组成，它需要将模型所有的图元形状变换为三角形
+        // aiProcess_FlipUVs将在处理的时候翻转y轴的纹理坐标 （在OpenGL中大部分的图像的y轴都是反的，所以这个后期处理选项将会修复这个）
+        // aiProcess_GenNormals：如果模型不包含法向量的话，就为每个顶点创建法线
+        // aiProcess_SplitLargeMeshes：将比较大的网格分割成更小的子网格，这样渲染的时候就不会超过OpenGL的渲染限制
+        // aiProcess_OptimizeMeshes：优化网格，合并网格，减少绘制调用
         const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_GenSmoothNormals | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
-        // check for errors
+        // check for errors 检查场景和其根节点不为null
         if(!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) // if is Not Zero
         {
             cout << "ERROR::ASSIMP:: " << importer.GetErrorString() << endl;
@@ -61,7 +67,7 @@ private:
         // retrieve the directory path of the filepath
         directory = path.substr(0, path.find_last_of('/'));
 
-        // process ASSIMP's root node recursively
+        // process ASSIMP's root node recursively 处理场景中的所有节点，所以我们将第一个节点（根节点）传入了递归的processNode函数
         processNode(scene->mRootNode, scene);
     }
 
@@ -81,7 +87,6 @@ private:
         {
             processNode(node->mChildren[i], scene);
         }
-
     }
 
     Mesh processMesh(aiMesh *mesh, const aiScene *scene)

@@ -75,6 +75,7 @@ int main()
     // -----------------------------
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
+    // 由于启用了混合，我们就不需要丢弃片段了，所以我们把片段着色器还原：
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     // build and compile shaders
@@ -219,11 +220,12 @@ int main()
         processInput(window);
 
         // sort the transparent windows before rendering
+        // 排序透明物体的一种方法是，从观察者视角获取物体的距离
         // ---------------------------------------------
-        std::map<float, glm::vec3> sorted;
+        std::map<float, glm::vec3> sorted;  // map会自动根据键值(Key)对它的值排序
         for (unsigned int i = 0; i < windows.size(); i++)
         {
-            float distance = glm::length(camera.Position - windows[i]);
+            float distance = glm::length(camera.Position - windows[i]);  // 这可以通过计算摄像机位置向量和物体的位置向量之间的距离所获得
             sorted[distance] = windows[i];
         }
 
@@ -259,8 +261,13 @@ int main()
         // windows (from furthest to nearest)
         glBindVertexArray(transparentVAO);
         glBindTexture(GL_TEXTURE_2D, transparentTexture);
-        for (std::map<float, glm::vec3>::reverse_iterator it = sorted.rbegin(); it != sorted.rend(); ++it)
+        // 要想让混合在多个物体上工作，我们需要最先绘制最远的物体，最后绘制最近的物体。
+        // 1 先绘制所有不透明的物体。
+        // 2 对所有透明的物体排序。
+        // 3 按顺序绘制所有透明的物体。
+        for (auto it = sorted.rbegin(); it != sorted.rend(); ++it)
         {
+            // 从远处到近处绘制
             model = glm::mat4(1.0f);
             model = glm::translate(model, it->second);
             shader.setMat4("model", model);

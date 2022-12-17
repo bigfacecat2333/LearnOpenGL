@@ -10,7 +10,8 @@ float LinearizeDepth(float depth)
 }
 
 void main()
-{             
+{
+    // 内建gl_FragCoord向量的z值包含了那个特定片段的深度值gl_FragCoord.z
     float depth = LinearizeDepth(gl_FragCoord.z) / far; // divide by far to get depth in range [0,1] for visualization purposes
     FragColor = vec4(vec3(depth), 1.0);
 }

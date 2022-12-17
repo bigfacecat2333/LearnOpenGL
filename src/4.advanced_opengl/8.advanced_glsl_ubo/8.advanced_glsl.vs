@@ -1,7 +1,7 @@
 #version 330 core
 layout (location = 0) in vec3 aPos;
 
-layout (std140) uniform Matrices
+layout (std140) uniform Matrices  // std140 表示一种布局格式
 {
     mat4 projection;
     mat4 view;

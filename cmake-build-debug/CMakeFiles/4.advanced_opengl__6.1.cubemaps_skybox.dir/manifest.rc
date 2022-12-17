@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "E:/xxy/graphics/LearnOpenGL/cmake-build-debug/CMakeFiles/4.advanced_opengl__6.1.cubemaps_skybox.dir/embed.manifest"

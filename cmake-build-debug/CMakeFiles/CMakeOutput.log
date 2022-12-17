@@ -1,16 +1,16 @@
 The system is: Windows - 10.0.22000 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: E:/xxy/visual studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x64/cl.exe 
+Compiler: E:/xxy/visual studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx86/x64/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30146 版
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.34.31935 版
 版权所有(C) Microsoft Corporation。保留所有权利。
 
 CMakeCCompilerId.c
-Microsoft (R) Incremental Linker Version 14.29.30146.0
+Microsoft (R) Incremental Linker Version 14.34.31935.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 /out:CMakeCCompilerId.exe 
@@ -24,17 +24,17 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is MSVC, found in "E:/xxy/graphics/LearnOpenGL/cmake-build-debug/CMakeFiles/3.22.3/CompilerIdC/CMakeCCompilerId.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: E:/xxy/visual studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x64/cl.exe 
+Compiler: E:/xxy/visual studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx86/x64/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30146 版
+用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.34.31935 版
 版权所有(C) Microsoft Corporation。保留所有权利。
 
 CMakeCXXCompilerId.cpp
-Microsoft (R) Incremental Linker Version 14.29.30146.0
+Microsoft (R) Incremental Linker Version 14.34.31935.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 /out:CMakeCXXCompilerId.exe 
@@ -50,16 +50,16 @@ The CXX compiler identification is MSVC, found in "E:/xxy/graphics/LearnOpenGL/c
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: E:/xxy/graphics/LearnOpenGL/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):E:/Users/shaw/sdk/CLion 2022.1/bin/ninja/win/ninja.exe cmTC_4c372 && [1/2] Building C object CMakeFiles\cmTC_4c372.dir\CMakeCCompilerABI.c.obj
-[2/2] Linking C executable cmTC_4c372.exe
+Run Build Command(s):E:/Users/shaw/sdk/CLion 2022.1/bin/ninja/win/ninja.exe cmTC_95d79 && [1/2] Building C object CMakeFiles\cmTC_95d79.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_95d79.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: E:/xxy/graphics/LearnOpenGL/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):E:/Users/shaw/sdk/CLion 2022.1/bin/ninja/win/ninja.exe cmTC_1ee0e && [1/2] Building CXX object CMakeFiles\cmTC_1ee0e.dir\CMakeCXXCompilerABI.cpp.obj
-[2/2] Linking CXX executable cmTC_1ee0e.exe
+Run Build Command(s):E:/Users/shaw/sdk/CLion 2022.1/bin/ninja/win/ninja.exe cmTC_cb720 && [1/2] Building CXX object CMakeFiles\cmTC_cb720.dir\CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_cb720.exe
 
 
 

@@ -56,7 +56,7 @@ public:
         setupMesh();
     }
 
-    // render the mesh
+    // render the mesh  渲染代码
     void Draw(Shader &shader) 
     {
         // bind appropriate textures
@@ -64,6 +64,7 @@ public:
         unsigned int specularNr = 1;
         unsigned int normalNr   = 1;
         unsigned int heightNr   = 1;
+        // 设置纹理的全局变量
         for(unsigned int i = 0; i < textures.size(); i++)
         {
             glActiveTexture(GL_TEXTURE0 + i); // active proper texture unit before binding

@@ -75,6 +75,7 @@ int main()
     // -----------------------------
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);
+    // 允许模板测试
     glEnable(GL_STENCIL_TEST);
     glStencilFunc(GL_NOTEQUAL, 1, 0xFF);
     glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
@@ -192,6 +193,7 @@ int main()
         // render
         // ------
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        // 和颜色和深度缓冲一样，你也需要在每次迭代之前清除模板缓冲
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT); // don't forget to clear the stencil buffer!
 
         // set uniforms
@@ -217,6 +219,8 @@ int main()
 
         // 1st. render pass, draw objects as normal, writing to the stencil buffer
         // --------------------------------------------------------------------
+        // glStencilMask(0xFF); // 每一位写入模板缓冲时都保持原样
+        // glStencilMask(0x00); // 每一位在写入模板缓冲时都会变成0（禁用写入）
         glStencilFunc(GL_ALWAYS, 1, 0xFF);
         glStencilMask(0xFF);
         // cubes

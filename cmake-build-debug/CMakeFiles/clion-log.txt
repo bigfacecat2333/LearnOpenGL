@@ -1,14 +1,14 @@
 "E:\Users\shaw\sdk\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=E:/Users/shaw/sdk/CLion 2022.1/bin/ninja/win/ninja.exe" -G Ninja -S E:\xxy\graphics\LearnOpenGL -B E:\xxy\graphics\LearnOpenGL\cmake-build-debug
--- The C compiler identification is MSVC 19.29.30146.0
--- The CXX compiler identification is MSVC 19.29.30146.0
+-- The C compiler identification is MSVC 19.34.31935.0
+-- The CXX compiler identification is MSVC 19.34.31935.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: E:/xxy/visual studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x64/cl.exe - skipped
+-- Check for working C compiler: E:/xxy/visual studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx86/x64/cl.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: E:/xxy/visual studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x64/cl.exe - skipped
+-- Check for working CXX compiler: E:/xxy/visual studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx86/x64/cl.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Found GLM: E:/xxy/graphics/LearnOpenGL/includes  

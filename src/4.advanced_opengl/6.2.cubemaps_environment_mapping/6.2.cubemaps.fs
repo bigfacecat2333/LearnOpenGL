@@ -9,7 +9,7 @@ uniform samplerCube skybox;
 
 void main()
 {    
-    vec3 I = normalize(Position - cameraPos);
+    vec3 I = normalize(Position - cameraPos);  // 摄像机指向物体的向量 ray direction
     vec3 R = reflect(I, normalize(Normal));
     FragColor = vec4(texture(skybox, R).rgb, 1.0);
 }

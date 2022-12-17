@@ -33,6 +33,12 @@ bool firstMouse = true;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
+// 一个完整的帧缓冲需要满足以下的条件：
+//  附加至少一个缓冲（颜色、深度或模板缓冲）。
+//  至少有一个颜色附件(Attachment)。
+//  所有的附件都必须是完整的（保留了内存）。
+//  每个缓冲都应该有相同的样本数。
+
 int main()
 {
     // glfw: initialize and configure
@@ -136,7 +142,8 @@ int main()
         -5.0f, -0.5f, -5.0f,  0.0f, 2.0f,
          5.0f, -0.5f, -5.0f,  2.0f, 2.0f
     };
-    float quadVertices[] = { // vertex attributes for a quad that fills the entire screen in Normalized Device Coordinates.
+    float quadVertices[] = {
+            // vertex attributes for a quad that fills the entire screen in Normalized Device Coordinates.
         // positions   // texCoords
         -1.0f,  1.0f,  0.0f, 1.0f,
         -1.0f, -1.0f,  0.0f, 0.0f,
@@ -195,23 +202,48 @@ int main()
 
     // framebuffer configuration
     // -------------------------
-    unsigned int framebuffer;
+    unsigned int framebuffer;  // fbo
     glGenFramebuffers(1, &framebuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
-    // create a color attachment texture
+    // 在完整性检查执行之前，我们需要给帧缓冲附加一个附件。附件是一个内存位置，它能够作为帧缓冲的一个缓冲，可以将它想象为一个图像。
+    // 当创建一个附件的时候我们有两个选项：纹理或渲染缓冲对象(Renderbuffer Object)。
+    // create a color attachment texture 颜色附件纹理
     unsigned int textureColorbuffer;
     glGenTextures(1, &textureColorbuffer);
     glBindTexture(GL_TEXTURE_2D, textureColorbuffer);
+    // 和普通纹理的区别：将维度设置为了屏幕大小，并且我们给纹理的data参数传递了NULL，仅仅分配了内存而没有填充它
+    // 填充这个纹理将会在我们渲染到帧缓冲之后来进行。同样注意我们并不关心环绕方式或多级渐远纹理，我们在大多数情况下都不会需要它们。
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, SCR_WIDTH, SCR_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // 将纹理附加到当前绑定的帧缓冲上
+    // target: 指定要附加的帧缓冲的目标，这里我们希望将纹理附加到帧缓冲上，所以我们使用GL_FRAMEBUFFER
+    // attachment: 指定附加的类型，这里我们希望将纹理作为颜色附件附加，所以我们使用GL_COLOR_ATTACHMENT0
+    // texture: 指定要附加的纹理的名称
+    // level: 指定纹理的多级渐远纹理的级别(mipmap)，我们不使用多级渐远纹理，所以这里总是为0
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureColorbuffer, 0);
+    // 附加一个深度和模板缓冲纹理到帧缓冲对象中（但不推荐）
+//    glTexImage2D(
+//            GL_TEXTURE_2D, 0, GL_DEPTH24_STENCIL8, 800, 600, 0,
+//            GL_DEPTH_STENCIL, GL_UNSIGNED_INT_24_8, NULL
+//    );
+//
+//    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_TEXTURE_2D, texture, 0);
+
     // create a renderbuffer object for depth and stencil attachment (we won't be sampling these)
+    // 渲染缓冲对象附件 渲染缓冲对象是一个真正的缓冲，即一系列的字节、整数、像素等。渲染缓冲对象附加的好处是，
+    // 它会将数据储存为OpenGL原生的渲染格式，它是为离屏渲染到帧缓冲优化过的。渲染缓冲对象直接将所有的渲染数据储存到它的缓冲中，
+    // 不会做任何针对纹理格式的转换，让它变为一个更快的可写储存介质。然而，渲染缓冲对象通常都是只写的，所以你不能读取它们（比如使用纹理访问）
     unsigned int rbo;
     glGenRenderbuffers(1, &rbo);
     glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, SCR_WIDTH, SCR_HEIGHT); // use a single renderbuffer object for both a depth AND stencil buffer.
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo); // now actually attach it
+    // use a single renderbuffer object for both a depth AND stencil buffer.
+    // 渲染缓冲对象通常都是只写的，它们会经常用于深度和模板附件
+    // 原因：我们需要深度和模板值用于测试，但不需要对它们进行采样， 不需要从这些缓冲中采样的时候，通常都会选择渲染缓冲对象
+    // L_DEPTH24_STENCIL8作为内部格式，它封装了24位的深度和8位的模板缓冲
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, SCR_WIDTH, SCR_HEIGHT);
+    // now actually attach it
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
     // now that we actually created the framebuffer and added all attachments we want to check if it is actually complete now
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
         cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << endl;
@@ -269,6 +301,9 @@ int main()
         glDrawArrays(GL_TRIANGLES, 0, 6);
         glBindVertexArray(0);
 
+        // 很重要！！！！！！！！(这就是颜色缓存单独拿出来的原因)
+        // 因为我们能够以一个纹理图像的方式访问已渲染场景中的每个像素，我们可以在片段着色器中创建出非常有趣的效果。
+        // 这些有趣效果统称为后期处理(Post-processing)效果。
         // now bind back to default framebuffer and draw a quad plane with the attached framebuffer color texture
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glDisable(GL_DEPTH_TEST); // disable depth test so screen-space quad isn't discarded due to depth test.
