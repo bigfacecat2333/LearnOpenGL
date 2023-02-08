@@ -78,6 +78,7 @@ int main()
     // 允许模板测试
     glEnable(GL_STENCIL_TEST);
     glStencilFunc(GL_NOTEQUAL, 1, 0xFF);
+    // GLenum sfail, GLenum dpfail, GLenum dppass 分别表示模板测试失败时采取的行为 模板测试通过，但深度测试失败时采取的行为 
     glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
 
     // build and compile shaders
